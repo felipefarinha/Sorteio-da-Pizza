@@ -22,15 +22,23 @@ body{
   width: 100%;
 }
 .buttom{
-  background-color: rgb(21, 2, 104);
+  background-color: rgb(16, 2, 78);
   text-align: center;
   border-radius: 2rem;
   cursor: pointer;
+  opacity: .9;
+   transition: 0.3s;
+
+}
+.buttom:hover{
+  opacity: 1;
+  background-color: rgb(38, 3, 197);
 }
 .buttom p{
   padding: 1rem 3rem;
   color: white;
   font-size: 1.4rem;
+  /* text-transform: uppercase; */
 }
 .div-resultado{
   margin-top: 50px;
