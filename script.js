@@ -7,13 +7,13 @@ const participantes = [
   {id: 4, nome: "Rodrigo", count: 0}
 ];
 ///////////////////////////////////////////
-min = 1;
-max = participantes.length +1;
+var min = 1;
+var max = participantes.length +1;
+var random;
 
-const resultado = document.getElementById('div-resultado');
-const buttom = document.getElementById('buttom');
-
-buttom.addEventListener('click', () => {
+document
+  .getElementById('buttom')
+  .addEventListener('click', () => {
 
   zerar();
 
@@ -26,13 +26,13 @@ buttom.addEventListener('click', () => {
 
     random_num (min, max); //gera um número aleatório
     
-    if(random == 1){
+    if(random === 1){
         participantes[0].count++
-    } else if(random == 2){
+    } else if(random === 2){
         participantes[1].count++
-    } else if(random == 3){
+    } else if(random === 3){
         participantes[2].count++
-    } else if(random == 4){
+    } else if(random === 4){
         participantes[3].count++
     }
   };
@@ -50,7 +50,10 @@ buttom.addEventListener('click', () => {
       return 0;
   });
 
-  resultado.innerHTML = `<p>Parabéns ${participantes[participantes.length -1].nome}! A pizza é por sua conta hoje 🍕🥳🤭</p>`;
+document
+  .getElementById('div-resultado')
+  .innerHTML = `<p>Parabéns ${participantes[participantes.length -1].nome}!
+   A pizza é por sua conta hoje 🍕🥳🤭</p>`;
 
   console.log("*Critério de desempate: Ordem alfabética do primeiro nome \n\nlog:")
   console.log(participantes)
@@ -69,3 +72,4 @@ function zerar(){
 // console.log(`Parabéns ${participantes[participantes.length -1].nome}! A pizza é por sua conta hoje 🍕🥳🤭`);
 // console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 // console.log(`\nSeu nome foi sorteado ${participantes[participantes.length -1].count} vezes`);
+

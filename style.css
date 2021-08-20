@@ -39,6 +39,7 @@ body{
   color: white;
   font-size: 1.4rem;
   /* text-transform: uppercase; */
+  margin: 0;
 }
 .div-resultado{
   margin-top: 50px;
